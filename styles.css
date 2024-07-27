@@ -82,6 +82,28 @@ nav a:hover::after {
     font-weight: 400;
 }
 
+.project-link {
+    color: dodgerblue; /* Same color as the rest of the text */
+    text-decoration: none;
+    position: relative; /* Required for the ::after positioning */
+    padding-bottom: 5px; /* Add some space for the underline */
+}
+
+.project-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: dodgerblue; /* Match the link color */
+    transition: width 0.3s ease-out; /* Smooth transition for the underline */
+}
+
+.project-link:hover::after {
+    width: 100%;
+}
+
 .project-header {
     font-size: 60px !important;
     font-weight: 500;
@@ -131,6 +153,5 @@ nav a:hover::after {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: rgb(28, 32, 50);
     margin-top: 50px;
 }
