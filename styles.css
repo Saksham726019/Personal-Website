@@ -280,14 +280,22 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    .name{
+        font-size: 16px !important;
+    }
+
     .nav-right {
         flex-direction: column;
         align-items: center;
     }
 
     .nav-right a {
-        margin: 5px 10px;
-        font-size: 14px;;
+        margin: 15px 10px !important;
+        font-size: 12px;;
     }
 
     .project-container {
@@ -303,7 +311,15 @@ footer {
     }
 
     .name-header {
-        font-size: 48px !important;
+        font-size: 28px !important;
+    }
+
+    .subtitle {
+        font-size: 16px !important;
+    }
+
+    .drexel-logo {
+        width: 20px;
     }
 
     .project-header {
