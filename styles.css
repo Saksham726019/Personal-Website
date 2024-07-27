@@ -81,11 +81,76 @@ nav a:hover::after {
     font-weight: 400;
 }
 
-.project-link {
-    color: dodgerblue; /* Same color as the rest of the text */
+.project-header {
+    font-size: 60px !important;
+    font-weight: 500;
+    color: #929bc5; /* Light blue color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Black shadow */
     text-decoration: none;
-    position: relative; /* Required for the ::after positioning */
-    padding-bottom: 5px; /* Add some space for the underline */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects-section {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column; /* Arrange the title and projects vertically */
+    align-items: center; /* Center the title and project boxes */
+}
+
+/* Container for the project boxes */
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px; /* Space between the project boxes */
+    width: 100%;
+    max-width: 1000px; /* Maximum width to limit content spread */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Styles for the project container box */
+.project {
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; /* Center elements horizontally */
+    background-color: rgb(35, 40, 62); /* Dark background for the box */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Black box shadow */
+    text-align: center; /* Center the text */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth transition for hover effects */
+    width: calc(50% - 10px); /* Each project takes half the width of the container, minus gap */
+}
+
+/* Hover effect for the project box */
+.project:hover {
+    transform: translateY(-10px); /* Move the box up */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Slightly larger shadow for emphasis */
+}
+
+.project img {
+    width: 150px; /* Adjust the size as needed */
+    margin-bottom: 15px; /* Space between logo and text */
+}
+
+.project h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #f0f0f0; /* Light color for text */
+}
+
+.project p {
+    font-size: 1.1em;
+    color: #d0d0d0; /* Slightly darker than the heading */
+    max-width: 600px;
+    margin: 0 auto 20px; /* Add some bottom margin for spacing */
+}
+
+.project-link {
+    color: dodgerblue; /* Specific color for the link */
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
 }
 
 .project-link::after {
@@ -95,46 +160,12 @@ nav a:hover::after {
     bottom: 0;
     height: 2px;
     width: 0;
-    background-color: dodgerblue; /* Match the link color */
-    transition: width 0.3s ease-out; /* Smooth transition for the underline */
+    background-color: dodgerblue;
+    transition: width 0.3s ease-out;
 }
 
 .project-link:hover::after {
     width: 100%;
-}
-
-.project-header {
-    font-size: 60px !important;
-    font-weight: 500;
-    color: #929bc5; /* Light blue color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Black shadow */
-    text-decoration: none;
-}
-
-.projects-section {
-    padding: 50px 20px;
-}
-
-.projects-section h2 {
-    font-size: 2em;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.project {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.project img {
-    width: 100px;
-    margin-right: 20px;
-}
-
-.project div {
-    max-width: 600px;
 }
 
 /* Scroll reveal animation */
